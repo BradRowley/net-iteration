@@ -110,8 +110,8 @@ namespace DotnetIteration
         // 
         public static bool EveryoneIsOdd(List<int> data)
         {
-            Func<EveryoneIsOdd, string, bool> EveryoneIsOdd = (x => % 2 !== 0);
-
+            // Func<EveryoneIsOdd, string, bool> EveryoneIsOdd = (x => % 2 !== 0);
+            throw new System.NotImplementedException();
             // var EveryoneIsOddput = data.Select(x => x % 2 == 0);
             // return EveryoneIsOddput;
 
