@@ -26,7 +26,9 @@ namespace DotnetIteration
         //
         public static IEnumerable<string> Yelling(List<string> words)
         {
-            throw new System.NotImplementedException();
+            var newWords = words.Select(word => word.ToUpper());
+            return newWords;
+
         }
 
 
@@ -37,7 +39,9 @@ namespace DotnetIteration
         // 
         public static IEnumerable<int> Double(List<int> numbers)
         {
-            throw new System.NotImplementedException();
+            var doubleList = numbers.Select(number => number * 2);
+            return doubleList;
+
         }
 
 
@@ -49,7 +53,8 @@ namespace DotnetIteration
         // 
         public static IEnumerable<string> StringyIndexes(List<string> data)
         {
-            throw new System.NotImplementedException();
+            var newList = data.Select((stringy, index) => $"{stringy} is at index {index}");
+            return newList;
         }
 
 
@@ -59,7 +64,9 @@ namespace DotnetIteration
         // 
         public static IEnumerable<int> OnlyTheEvenSurvive(List<int> data)
         {
-            throw new System.NotImplementedException();
+            var onlyTheEvenSurviveList = data.Where(x => x % 2 == 0);
+            return onlyTheEvenSurviveList;
+
         }
 
 
@@ -70,7 +77,8 @@ namespace DotnetIteration
         // 
         public static IEnumerable<int> OnlyTheEvenIndexedSurvive(List<int> data)
         {
-            throw new System.NotImplementedException();
+            var onlyTheEvenIndexedSurviveList = data.Where(x => x % 2 == 0);
+            return onlyTheEvenIndexedSurviveList;
         }
 
 
@@ -89,7 +97,10 @@ namespace DotnetIteration
         // 
         public static IEnumerable<string> BestMovieOfTheYear(List<Movie> data, int year)
         {
-            throw new System.NotImplementedException();
+            var bestMovie = data.Where(movie => movie.Year == year && movie.Score >= 90);
+            var namesOfBestMovies = bestMovie.Select(movie => movie.Name);
+            return namesOfBestMovies;
+
         }
 
 
@@ -99,7 +110,11 @@ namespace DotnetIteration
         // 
         public static bool EveryoneIsOdd(List<int> data)
         {
-            throw new System.NotImplementedException();
+            Func<EveryoneIsOdd, string, bool> EveryoneIsOdd = (x => % 2 !== 0);
+
+            // var EveryoneIsOddput = data.Select(x => x % 2 == 0);
+            // return EveryoneIsOddput;
+
         }
 
 
